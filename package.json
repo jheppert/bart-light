@@ -7,5 +7,10 @@
     "start": "node index.js"
   },
   "author": "Jeff Heppert",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "bart": "0.0.3",
+    "express": "^4.13.3",
+    "http": "0.0.0"
+  }
 }
