@@ -1,5 +1,11 @@
-
+var http = require('http');
+var app = require('express')();
 var bart = require('bart').createClient();
+
+//Serve index.html when some make a request of the server
+app.get('/', function(req, res) {
+    res.sendFile(__dirname + '/index.html');
+});
 
 function queryBart(){
 
@@ -12,6 +18,16 @@ function queryBart(){
     }
 
     console.log(trainData);
+
+    // Return the data via JSON object:
+    var app = http.createServer(function(req,res){
+        res.setHeader('Content-Type', 'application/json');
+        res.send(JSON.stringify({ "message": "hey there" }));
+    });
+    
+    // http.listen(3000, function() {
+    //     console.log('listening on *:3000');
+    // });
 
   });
 
