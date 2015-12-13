@@ -1,5 +1,6 @@
-var http = require('http');
+
 var app = require('express')();
+var http = require('http').Server(app);
 var bart = require('bart').createClient();
 
 //Serve index.html when some make a request of the server
