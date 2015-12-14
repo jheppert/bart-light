@@ -33,14 +33,16 @@ function queryBart(req, res){
           return a - b;
         });
 
-        for(var i=0; i<2; i++) {
-            if(departures[i] > 4) {
-                if(i == 1) {
-                    response += ",";
-                }
-                response += departures[i];
-            }
-        }
+        // for(var i=0; i<2; i++) {
+        //     if(departures[i] > 4) {
+        //         if(i == 1) {
+        //             response += ",";
+        //         }
+        //         response += departures[i];
+        //     }
+        // }
+
+        response = departures[0] + "," + departures[1];
 
         res.send(response);
 
