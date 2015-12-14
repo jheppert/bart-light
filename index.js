@@ -9,7 +9,7 @@ function queryBart(req, res){
 
     bart.on('mont south', function(data){
     // console.log(data); //Output raw returned data
-    var trainData = data[0].minutes;
+    var trainData = data[0].minutes + "," + data[1].minutes;
     // var  trainData = [];
     // for(var i in data) {
     //   // trainData.push({ "destination": data[i].destination, "minutes": data[i].minutes });
