@@ -19,6 +19,11 @@ function queryBart(req, res){
     // return trainData;
     res.setHeader('Content-Type', 'application/json');
     res.json(trainData);
+    // server = app.listen(process.env.PORT);
+    // setTimeout(function () {
+    //     server.close();
+    //     // ^^^^^^^^^^^
+    // }, 3000);
 
     });
 
