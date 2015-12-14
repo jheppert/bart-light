@@ -1,7 +1,7 @@
 
 var app = require('express')();
 var http = require('http').Server(app);
-var bart = require('bart').createClient();
+var bart = require('bart').createClient({"inverval":0});
 
 
 function queryBart(req, res){
