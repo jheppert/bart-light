@@ -7,17 +7,17 @@ var bart = require('bart').createClient();
 function queryBart(req, res){
     console.log("in the function");
 
-    bart.on('deln south', function(data){
+    bart.on('mont south', function(data){
     // console.log(data); //Output raw returned data
-    var  trainData = [];
-    for(var i in data) {
-      trainData.push({ "destination": data[i].destination, "minutes": data[i].minutes });
-      // console.log(data[i].destination + " train comes in " + data[i].minutes + " minutes");
-    }
+    var trainData = data[0].minutes;
+    // var  trainData = [];
+    // for(var i in data) {
+    //   // trainData.push({ "destination": data[i].destination, "minutes": data[i].minutes });
+    //   trainData.push(data[i].minutes);
+    //   // console.log(data[i].destination + " train comes in " + data[i].minutes + " minutes");
+    // }
 
-    // console.log(trainData);
-    // return trainData;
-    res.setHeader('Content-Type', 'application/json');
+    // res.setHeader('Content-Type', 'application/json');
     res.json(trainData);
     // server = app.listen(process.env.PORT);
     // setTimeout(function () {
