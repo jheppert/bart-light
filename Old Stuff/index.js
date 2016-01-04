@@ -3,7 +3,6 @@ var app = require('express')();
 var http = require('http').Server(app);
 var parseString = require('xml2js').parseString;
 var request = require('request');
-// var bart = require('bart').createClient({"inverval":0}); // REMOVED FROM BUGGY VERSION
 
 
 function queryBart(req, res){
