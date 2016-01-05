@@ -13,6 +13,8 @@
 ####How It Works
 Every 60 seconds, the Particle Photon (Photon Code.cpp) requests the PHP script (index.php). The PHP script requests data from the Bart API, parses the XML for the data it needs, and outputs the result in a simplified format. The Particle Photon parses the data, and uses that information to control indicating LEDs.
 
+Since the Particle Photon cannot (to my knowledge) request from the PHP script directly, I am using a Webhook. This is set up through the command line, and it checks the PHP URL independent of the device's code, and then returns the results to the device code. I assume this is part of some MVC methodology, but works for me either way.
+
 Because of the limited memory of the Particle Photon device, most of the parsing is done by the PHP script. Only the essential data is given to the device in a simple format: **color:time,color:time** where **color** is the color of the train line, and **time** is the time until that train arrives. The color will be used to visually indicate which line corresponds to the arrival times.
 
 ####In Its Current State
